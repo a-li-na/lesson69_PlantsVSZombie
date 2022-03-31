@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.shooter {
+			width: 80px; 
+			position: absolute; 
+		}
+
+
+
+		.box {
+			background-image: url(game.png);
+			height: 1000px; 
+			background-size: 100% 100%;
+		}
+		.zombies {
+			width: 80px; 
+			position: absolute;
+			margin-left: 1100px;
+		}
+
+	</style>
+</head>
+<body>	
+	
+	<div class="box" style="">
+		
+		<h5 style="position: absolute; left: 600px; top: 50px" class="score"> Score: <span class="num"> 0 </span> </h5>
+
+		<!--ГОРОХИ-->
+	    <img class="shooter" src="peashooter.png" style="margin-top: 300px;margin-left: 650px;">		
+		<img class="shooter   shooter2" src="peashooter.png" style="margin-top: 420px;margin-left: 450px;">	
+		<img class="shooter   shooter3" src="peashooter.png" style="margin-top: 550px;margin-left: 850px;">	
+		<img class="shooter   shooter4" src="peashooter.png" style="margin-top: 680px;margin-left: 450px;">
+		<img class="shooter   shooter5" src="peashooter.png" style="margin-top: 800px;margin-left: 550px;	">
+
+
+		<!--ЗОМБИ-->
+		<img class="zombies zombie1" src="zombie.png" style="margin-top: 250px;">
+		<img class="zombies zombie2" src="zombie.png" style="margin-top: 370px;">
+		<img class="zombies zombie3" src="zombie.png" style="margin-top: 510px;">
+		<img class="zombies zombie4" src="zombie.png" style="margin-top: 630px;">
+		<img class="zombies zombie5" src="zombie.png" style="margin-top: 770px;">
+	</div>
+
+
+
+<script>
+
+	let score = 0;
+
+	console.log(score);
+
+
+	let shooter = document.querySelectorAll(".shooter");
+
+	let zombies = document.querySelectorAll(".zombies");
+	let step = 1100;
+	let step2 = 1100;
+	let step3 = 1100;
+	let step4 = 1100;
+	let step5 = 1100;
+
+
+
+
+	zombies[0].onclick = function(){
+		step = step - 100;
+		zombies[0].style.marginLeft = step + "px";
+		console.log(step);
+
+		if(step == 600) {
+			alert('сьел');
+			document.querySelector('.shooter').style.display = "none";
+			score = score + 1;
+			document.querySelector('.num').innerHTML = score;
+
+		if (score == 5) {
+			document.querySelector(".zombie1").style.display = "none";
+			document.querySelector(".zombie2").style.display = "none";
+			document.querySelector(".zombie3").style.display = "none";
+			document.querySelector(".zombie4").style.display = "none";
+			document.querySelector(".zombie5").style.display = "none";
+		}
+		}
+
+	}
+
+
+	zombies[1].onclick = function(){
+		step2 = step2 - 100;
+		zombies[1].style.marginLeft = step2 + "px";
+		console.log(step2);
+
+		if(step2 == 400) {
+			alert('сьел');
+			document.querySelector('.shooter2').style.display = "none";
+			score = score + 1;
+			document.querySelector('.num').innerHTML = score;
+
+
+		if (score == 5) {
+			document.querySelector(".zombie1").style.display = "none";
+			document.querySelector(".zombie2").style.display = "none";
+			document.querySelector(".zombie3").style.display = "none";
+			document.querySelector(".zombie4").style.display = "none";
+			document.querySelector(".zombie5").style.display = "none";
+		}
+		}
+
+	}
+
+
+
+	zombies[2].onclick = function(){
+		step3 = step3 - 100;
+		zombies[2].style.marginLeft = step3 + "px";
+		console.log(step3);
+
+		if(step3 == 800) {
+			alert('сьел');
+			document.querySelector('.shooter3').style.display = "none";
+			score = score + 1;
+			document.querySelector('.num').innerHTML = score;
+
+
+		if (score == 5) {
+			document.querySelector(".zombie1").style.display = "none";
+			document.querySelector(".zombie2").style.display = "none";
+			document.querySelector(".zombie3").style.display = "none";
+			document.querySelector(".zombie4").style.display = "none";
+			document.querySelector(".zombie5").style.display = "none";
+		}
+		}
+
+
+	}
+
+
+	zombies[3].onclick = function(){
+		step4 = step4 - 100;
+		zombies[3].style.marginLeft = step4 + "px";
+		console.log(step4);
+
+		if(step4 == 400) {
+			alert('сьел');
+			document.querySelector(".shooter4").style.display = "none";
+			score = score + 1;
+			document.querySelector('.num').innerHTML = score;
+
+
+		if (score == 5) {
+			document.querySelector(".zombie1").style.display = "none";
+			document.querySelector(".zombie2").style.display = "none";
+			document.querySelector(".zombie3").style.display = "none";
+			document.querySelector(".zombie4").style.display = "none";
+			document.querySelector(".zombie5").style.display = "none";
+		}
+		}
+
+	}
+
+
+
+	zombies[4].onclick = function(){
+		step5 = step5 - 100;
+		zombies[4].style.marginLeft = step5 + "px";
+		console.log(step5);
+
+		if(step5 == 500) {
+			alert('сьел');
+			document.querySelector(".shooter5").style.display = "none";
+			score = score + 1;
+			document.querySelector('.num').innerHTML = score;
+
+
+		if (score == 5) {
+			document.querySelector(".zombie1").style.display = "none";
+			document.querySelector(".zombie2").style.display = "none";
+			document.querySelector(".zombie3").style.display = "none";
+			document.querySelector(".zombie4").style.display = "none";
+			document.querySelector(".zombie5").style.display = "none";
+		}
+		}
+
+
+	}
+
+
+
+
+
+
+</script>
+</body>
+</html>
